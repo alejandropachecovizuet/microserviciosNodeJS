@@ -10,3 +10,4 @@ app.use(bodyParser.json());
 let router = require('./routes/allRoutes')();
  
 app.use('/api/v1', router);
+module.exports = app

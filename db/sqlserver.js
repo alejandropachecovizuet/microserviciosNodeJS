@@ -6,9 +6,9 @@ let execute= (callback)=>new Promise((resolve, reject)=>{
                  enableArithAbort: true,
                  encrypt: true
                }};               
-               console.log('[SQL] conection:',config);
+               //console.log('[SQL] conection:',config);
                sqlserver.connect(config).then(() => callback(sqlserver)).then(result => {
-                    console.dir('[SQL]Result',result)
+                    //console.dir('[SQL]Result',result)
                     sqlserver.close();
                     resolve(result);
                 }).catch(err => {

@@ -6,7 +6,7 @@ exports.add=(req, res)=>{
         let query =`INSERT INTO EMPLOYEES(email_address,first_name ,last_name) VALUES('${firstName}', '${lastName}','${emailId}')`;
         return sqlserver.query(query);
     }).then(result=>{
-        console.log(result);
+        //console.log(result);
         res.status(200).send({firstName,lastName,emailId});
     })
 }
@@ -17,7 +17,7 @@ exports.getAll=(req, res)=>{
         let query ="SELECT * FROM EMPLOYEES";
         return sqlserver.query(query);
     }).then(result=>{
-        console.log(result);
+        //console.log(result);
         res.status(200).send(result.recordsets[0]);
     })
 }
@@ -32,7 +32,7 @@ exports.update=(req, res)=>{
         console.log(query);
         return sqlserver.query(query);
     }).then(result=>{
-        console.log(result);
+        //console.log(result);
         res.status(200).send({firstName,lastName,emailId});
     })
 }
@@ -44,7 +44,7 @@ exports.delete=(req, res)=>{
         console.log(query);
         return sqlserver.query(query);
     }).then(result=>{
-        console.log(result);
+        //console.log(result);
         if(result.rowsAffected!=0){
             res.status(200).send({deleted:'true'});
         }else{
