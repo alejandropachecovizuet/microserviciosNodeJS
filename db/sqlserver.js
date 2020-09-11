@@ -1,7 +1,7 @@
 const sqlserver = require('mssql');
 
 let execute= (callback)=>new Promise((resolve, reject)=>{
-               let config = {user: 'sa', server: '172.17.0.2', port:1433 ,database: 'EMPLOYEES', password: '1qaz2wsx$1A',  stream: false,
+               let config = {user: 'sa', server: 'dev.interware.com.mx', port:1433 ,database: 'EMPLOYEES', password: 'myPassword',  stream: false,
                options: {
                  enableArithAbort: true,
                  encrypt: true
